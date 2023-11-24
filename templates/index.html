@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Portfolio - kaanuznr</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2d2d2d;
+            background: url('{{ url_for('static', filename='back.webp') }}') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            background-repeat: no-repeat; /* Resmi tekrarlamayı devre dışı bırak */
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(31, 31, 31, 0.3); /* 0.8 alpha değeri */
+            color: #fff;
+            padding: 1rem;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: rgba(31, 31, 31, 0.3); /* 0.8 alpha değeri */
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .project-card {
+            background-color: #333;
+            border: 1px solid #555;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-bar {
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-bar span {
+            display: block;
+            background-color: #4caf50;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .contact-section {
+            margin-top: 2rem;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-icons a {
+            color: #fff;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-icons a:hover {
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header>
+        <div class="container mx-auto">
+            <h1 class="text-2xl font-semibold">Hoş Geldiniz!</h1>
+            <nav class="mt-2">
+                <ul class="flex">
+                    <li class="mr-4"><a href="/">Ana Sayfa</a></li>
+                    <li><a href="/about">Hakkımda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="flex-1 mt-4">
+        <h2 class="text-3xl font-semibold mb-2">Projelerim</h2>
+
+        <!-- Proje Kartları -->
+        <div class="project-card">
+            <h3 class="text-xl font-semibold">Proje Adı 1</h3>
+            <p>Kısa açıklama veya özet...</p>
+        </div>
+
+        <div class="project-card">
+            <h3 class="text-xl font-semibold">Proje Adı 2</h3>
+            <p>Kısa açıklama veya özet...</p>
+        </div>
+
+        <!-- Yetenekler ve Teknolojiler -->
+        <h2 class="text-3xl font-semibold mb-2">Yetenekler ve Teknolojiler</h2>
+        <div class="skill-bar">
+            <span style="width: 70%;"></span>
+            <p class="text-lg">Python</p>
+        </div>
+
+        <div class="skill-bar">
+            <span style="width: 80%;"></span>
+            <p class="text-lg">JavaScript</p>
+        </div>
+
+        <div class="skill-bar">
+            <span style="width: 60%;"></span>
+            <p class="text-lg">React</p>
+        </div>
+
+        <div class="skill-bar">
+            <span style="width: 75%;"></span>
+            <p class="text-lg">Django</p>
+        </div>
+
+        <div class="skill-bar">
+            <span style="width: 90%;"></span>
+            <p class="text-lg">Problem Çözme</p>
+        </div>
+    </section>
+    <footer>
+        <div class="container mx-auto">
+            <p>&copy; 2023 kaanuznr</p>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
